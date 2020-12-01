@@ -1,20 +1,90 @@
-// SProject.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <time.h>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int choice, v1, v2, ans, total;
+
+	srand(time(0));
+	v1 = rand() % 100;
+	v2 = rand() % 100 + 1;
+
+	do
+	{
+		cout << "-- Menu --" << endl;
+		cout << "1: Add" << endl;
+		cout << "2: Subtract" << endl;
+		cout << "3: Multiply" << endl;
+		cout << "4: Divide" << endl;
+		cout << "0: Exit" << endl;
+		cout << "-- enter your choice: ";
+		cin >> choice;
+
+		switch (choice)
+		{
+		case 1:
+			cout << "What is " << v1 << " + " << v2 << "? ";
+			cin >> ans;
+			total = v1 + v2;
+
+			if (ans == v1 + v2) {
+				cout << "Correct answer" << endl;
+			}
+			else {
+				cout << "Wrong answer, please try again" << endl;
+			}
+			return 1;
+
+
+
+		case 2:
+			cout << "What is " << v1 << " - " << v2 << "? ";
+			cin >> ans;
+			total = v1 - v2;
+
+			if (ans == v1 - v2) {
+				cout << "Correct answer!" << endl;
+			}
+			else {
+				cout << "Wrong answer, please try again!" << endl;
+			}
+			return 1;
+
+
+		case 3:
+			cout << "What is " << v1 << " * " << v2 << "? ";
+			cin >> ans;
+			total = v1 * v2;
+
+			if (ans == v1 * v2) {
+				cout << "Correct answer!" << endl;
+			}
+			else {
+				cout << "Wrong answer, please try again!" << endl;
+			}
+			return 1;
+
+
+		case 4:
+			cout << "What is " << v1 << " / " << v2 << "? ";
+			cin >> ans;
+			total = v1 / v2;
+
+			if (ans == v1 / v2) {
+				cout << "Correct answer!" << endl;
+			}
+			else {
+				cout << "Wrong answer, please try again!" << endl;
+			}
+			return 1;
+
+
+
+		default:
+			cout << "You chose to exit." << endl;
+		}
+	} while (choice != 0);
+
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
