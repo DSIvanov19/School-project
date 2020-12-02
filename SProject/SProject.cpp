@@ -1,4 +1,9 @@
 #include <iostream>
+#include "numSum.h"
+#include "numSub.h"
+#include "numMul.h"
+#include "numDiv.h"
+#include "printText.h"
 #include <time.h>
 using namespace std;
 
@@ -13,12 +18,14 @@ int main()
 	do
 	{
 		cout << "-- Menu --" << endl;
+		cout << "==========" << endl;
 		cout << "1: Add" << endl;
 		cout << "2: Subtract" << endl;
 		cout << "3: Multiply" << endl;
 		cout << "4: Divide" << endl;
 		cout << "0: Exit" << endl;
-		cout << "-- enter your choice: ";
+		cout << "==========" << endl;
+		cout << "-- Enter your choice: ";
 		cin >> choice;
 
 		switch (choice)
@@ -26,61 +33,32 @@ int main()
 		case 1:
 			cout << "What is " << v1 << " + " << v2 << "? ";
 			cin >> ans;
-			total = v1 + v2;
-
-			if (ans == v1 + v2) {
-				cout << "Correct answer" << endl;
-			}
-			else {
-				cout << "Wrong answer, please try again" << endl;
-			}
+			total = numSum(v1, v2);
+			printText(total, ans);
 			return 1;
-
-
 
 		case 2:
 			cout << "What is " << v1 << " - " << v2 << "? ";
 			cin >> ans;
-			total = v1 - v2;
-
-			if (ans == v1 - v2) {
-				cout << "Correct answer!" << endl;
-			}
-			else {
-				cout << "Wrong answer, please try again!" << endl;
-			}
+			total = numSub(v1, v2);
+			printText(total, ans);
 			return 1;
 
 
 		case 3:
 			cout << "What is " << v1 << " * " << v2 << "? ";
 			cin >> ans;
-			total = v1 * v2;
-
-			if (ans == v1 * v2) {
-				cout << "Correct answer!" << endl;
-			}
-			else {
-				cout << "Wrong answer, please try again!" << endl;
-			}
+			total = numMul(v1, v2);
+			printText(total, ans);
 			return 1;
 
 
 		case 4:
 			cout << "What is " << v1 << " / " << v2 << "? ";
 			cin >> ans;
-			total = v1 / v2;
-
-			if (ans == v1 / v2) {
-				cout << "Correct answer!" << endl;
-			}
-			else {
-				cout << "Wrong answer, please try again!" << endl;
-			}
+			total = numDiv(v1, v2);
+			printText(total, ans);
 			return 1;
-
-
-
 		default:
 			cout << "You chose to exit." << endl;
 		}

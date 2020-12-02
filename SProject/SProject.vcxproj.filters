@@ -19,4 +19,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="numSum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="numSub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="printText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="numMul.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="numDiv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

@@ -141,6 +141,13 @@
   <ItemGroup>
     <ClCompile Include="SProject.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="numDiv.h" />
+    <ClInclude Include="numMul.h" />
+    <ClInclude Include="numSub.h" />
+    <ClInclude Include="numSum.h" />
+    <ClInclude Include="printText.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
